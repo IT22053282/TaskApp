@@ -21,7 +21,7 @@
 
             <TextView
                 android:id="@+id/titleTextView"
-                android:layout_width="60dp"
+                android:layout_width="295dp"
                 android:layout_height="wrap_content"
                 android:text="Title"
                 android:textColor="@color/orange"
@@ -53,7 +53,7 @@
 
             <TextView
                 android:id="@+id/contentTextView"
-                android:layout_width="83dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/titleTextView"
                 android:layout_alignParentStart="true"
