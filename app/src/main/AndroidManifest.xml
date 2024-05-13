@@ -12,14 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToDoApp"
         tools:targetApi="31">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
         <activity
             android:name=".updateTaskActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".addTaskActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".WelcomeScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
