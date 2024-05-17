@@ -28,12 +28,16 @@ class updateTaskActivity : AppCompatActivity() {
         if (task != null) { // Added null check
             binding.updateTitleEditText.setText(task.title)
             binding.UpdateDescriptionEditText.setText(task.description)
+            binding.updateDateEditText.setText(task.date)
+            binding.updateTimeEditText.setText(task.time)
         }
 
         binding.updateSavebtn.setOnClickListener {
             val newTitle = binding.updateTitleEditText.text.toString()
             val newContent = binding.UpdateDescriptionEditText.text.toString()
-            val updatedTask = Task(taskId, newTitle, newContent)
+            val newDate = binding.updateDateEditText.text.toString() // Get the new date
+            val newTime = binding.updateTimeEditText.text.toString()
+            val updatedTask = Task(taskId, newTitle, newContent, newDate, newTime)
             db.updateTask(updatedTask)
             finish()
             Toast.makeText(this, "Changes Saved", Toast.LENGTH_SHORT).show()

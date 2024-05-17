@@ -20,6 +20,8 @@ class TaskAdapter(private var tasks: List<Task>, private val context: Context) :
     class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         val contentTextView: TextView = itemView.findViewById(R.id.contentTextView)
+        val dateTextView: TextView = itemView.findViewById(R.id.dateTextView)
+        val timeTextView: TextView = itemView.findViewById(R.id.timeTextView)
         val updateBtn: ImageView = itemView.findViewById(R.id.updateBtn)
         val deleteButton: ImageView = itemView.findViewById(R.id.deleteButton)
     }
@@ -38,6 +40,8 @@ class TaskAdapter(private var tasks: List<Task>, private val context: Context) :
         val currentTask = tasks[position]
         holder.titleTextView.text = currentTask.title
         holder.contentTextView.text = currentTask.description
+        holder.dateTextView.text = currentTask.date
+        holder.timeTextView.text = currentTask.time
         holder.updateBtn.setOnClickListener {
             val intent =
                 Intent(holder.itemView.context, updateTaskActivity::class.java).apply {
